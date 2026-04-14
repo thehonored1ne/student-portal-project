@@ -4,5 +4,5 @@ Dion L. Areglo - TL
 Mark Benjie Arabe - Homepage
 Jan Margarette Antonio - Login
 Eljun Bacarisas - Dashboard
-Badillo David Andrei - Profile Page
+Badillo David Andrei - Profile Pages
 Russel Vinz Agana - Contact Us
