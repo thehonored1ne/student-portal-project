@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Student Portal</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --primary-blue: #2563eb;
+            --dark-blue: #1e40af;
+            --bg-gray: #f3f4f6;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --white: #ffffff;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: var(--text-muted);
+        }
+
+        /* Layout Grid */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+
+        /* Sidebar Info */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+        }
+
+        .info-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+        }
+
+        .status-dot {
+            height: 10px;
+            width: 10px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* Main Form */
+        .form-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            box-sizing: border-box; /* Important for padding */
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .submit-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--dark-blue);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Contact Support</h1>
+            <p>Reach out to the University administration or IT help desk.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>IT Help Desk</h3>
+                    <p>Issues with login, Canvas, or University Email.</p>
+                    <p><strong>Email:</strong> helpdesk@uni.edu</p>
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Academic Advising</h3>
+                    <p>Course selection and graduation requirements.</p>
+                    <p><strong>Location:</strong> Building B, Room 204</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>System Status</h3>
+                    <p><span class="status-dot"></span> All systems operational</p>
+                    <p style="font-size: 0.8rem;">Last checked: 5 mins ago</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentID">Student ID</label>
+                            <input type="text" id="studentID" placeholder="e.g. 2024-0001" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Inquiry Category</label>
+                        <select id="category">
+                            <option value="tech">Technical Issue</option>
+                            <option value="billing">Tuition & Fees</option>
+                            <option value="academic">Academic Records</option>
+                            <option value="other">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Summary of your issue" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Please describe your request in detail..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Basic Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Support ticket submitted successfully!');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
