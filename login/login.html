@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login UI</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: linear-gradient(135deg, #FEC8D8, #D291BC);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 900px;
+        height: 500px;
+        background: linear-gradient(135deg, #6a006a, #a1006b);
+        border-radius: 15px;
+        display: flex;
+        color: white;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .left {
+        flex: 1;
+        padding: 60px;
+    }
+
+    .left h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .left p {
+        font-size: 14px;
+        margin-bottom: 30px;
+        color: #ddd;
+    }
+
+    .left button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background: linear-gradient(90deg, orange, red);
+        color: white;
+        cursor: pointer;
+    }
+
+    .right {
+        width: 350px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .right h2 {
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+    }
+
+    .submit-btn {
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        background: linear-gradient(90deg, orange, red);
+        color: white;
+        cursor: pointer;
+    }
+
+    .social {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <h1>Welcome!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button>Learn More</button>
+    </div>
+
+    <div class="right">
+        <h2>Sign in</h2>
+        <div class="input-group">
+            <input type="text" placeholder="User Name">
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="Password">
+        </div>
+        <button class="submit-btn">Submit</button>
+        <div class="social">
+            Ⓕ Ⓘ Ⓟ
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
